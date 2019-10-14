@@ -38,3 +38,31 @@
 .rsb{
   padding-top: 1.9%;
 }
+
+.mainDropdown{
+   padding-top: 4%;
+   
+}
+
+.myClassName{
+   width: 55%;
+   height: 10vh;
+   float: right;
+   text-align: center;
+   align-items: center;
+}
+
+.mainClassName{
+   border-width: 10px;
+   border-color: white;
+   border-radius: 360px;
+}
+
+.myPlaceholderClassName{
+  padding-top: 18%;
+}
+
+.myArrowClassName{
+   
+   margin-top: 3vh;
+}

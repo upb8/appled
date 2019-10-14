@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 import ReactSearchBox from 'react-search-box';
-import partsData from '../../res/parts/parts.json';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
+
 
 const data = [
   {
@@ -31,12 +31,11 @@ const data = [
 ]
 
 const options = [
-  'one', 'two', 'three'
+  'one', 'two', 'two', 'three'
 ]
 
 function Search() {
-  // console.log(partsData.cpu.core2Duo.E4200.searchable)
-  //console.log(this.props.location);
+ 
   
   return (
     <div>
@@ -48,7 +47,9 @@ function Search() {
       <div className="searchContainerHolder">
         <div className="searchContainer">
           <div className="searchDropdown">
-          <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
+            <div className="mainDropdown">
+            <Dropdown arrowClassName='myArrowClassName' placeholderClassName='myPlaceholderClassName' className='mainClassName' controlClassName='myClassName' options={options} placeholder="Select an option" />;
+            </div>
           </div>
           <div className="searchBox">
       <div className="rsb">
