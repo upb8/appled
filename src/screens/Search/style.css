@@ -144,8 +144,10 @@
     transition: color 0.4s ease;
   }
 
-  .searchBox{
+  /* .searchBox{
     width: 50%;
-    height: 1vh;
-  }
+    text-align: center;
+    background: red;
+    padding-left: 50vw;
+  } */
   
