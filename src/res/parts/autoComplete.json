@@ -1,0 +1,17 @@
+{
+    "autocomplete": [
+        {
+            "cpu": {
+                "E4200": {
+                    "model": "E4200",
+                    "socket": "LGA 775",
+                    "releaseDate": "January 2007",
+                    "partNo": [
+                        "HH80557PG0332M",
+                        "BX80557E4300"
+                    ]
+                }
+            }
+        }
+    ]
+}
