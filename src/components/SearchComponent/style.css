@@ -1,3 +1,40 @@
-.main{
-   height: 500px !important;
+
+.label{
+   color: white;
+   font-size: 4vh;
+   font-weight: 400;
+}
+.searchContainerHolder{
+   padding-top: 20%;
+}
+.searchContainer{
+   width: 100%;
+   background: white;
+   
+}
+.searchDropdown{
+   background: green;
+   width: 25%;
+   float: left;
+   height: 13vh;
+   opacity: .5;
+}
+.searchBox{
+   background: red;
+   width: 50%;
+   float: left;
+   height: 13vh;
+   opacity: .5;
+  
+}
+.searchButton{
+   background: white;
+   width: 25%;
+   float: right;
+   height: 13vh;
+   opacity: .5;
+}
+
+.rsb{
+  padding-top: 1.9%;
 }
