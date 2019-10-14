@@ -1,0 +1,100 @@
+{
+  "cpu": {
+    "Core 2 Duo": {
+      "E4200": {
+        "details": {
+          "fullName": "Core 2 Duo E4200",
+          "cores": "2",
+          "frequency": "1.6 GHz",
+          "l2Cache": "2 MiB",
+          "FSB": "800 MHz",
+          "clkMulti": "8×",
+          "voltage": "0.85–1.5 V",
+          "TDP": "65 W"
+        },
+        "searchable": {
+          "model": "E4200",
+          "socket": "LGA 775",
+          "releaseDate": "January 2007",
+          "partNo": [
+            "HH80557PG0332M",
+            "BX80557E4300"
+          ]
+        },
+        "image": {
+          "thumb": "./src/res/img/thumbs/core_2",
+          "full": "./src/res/img/full/core_2"
+        },
+        "igpu": {
+          "status": "none",
+          "compatible": "null",
+          "kext": "null"
+        },
+        "links": {
+          "amazon": {
+            "us": "null",
+            "ca": "null",
+            "uk": "null",
+            "de": "null",
+            "es": "null",
+            "fr": "null",
+            "it": "null",
+            "in": "null"
+          },
+          "newegg": "null",
+          "ebay": "null"
+        },
+        "related": {
+          "worse": {
+            "type": "Core 2 Duo",
+            "model": "E4300"
+          },
+          "similar": {
+            "type": "Core 2 Quad",
+            "model": "Q8300"
+          },
+          "better": {
+            "type": "Core i3",
+            "model": "Q8300"
+          }
+        }
+      },
+      "E4300": {},
+      "E4400": {},
+      "E4500": {},
+      "E4600": {},
+      "E4700": {},
+      "E6300": {},
+      "E6320": {},
+      "E6400": {},
+      "E6420": {},
+      "E6600": {},
+      "E6700": {},
+      "E6540": {},
+      "E6550": {},
+      "E6750": {},
+      "E6850": {},
+      "E6305": {},
+      "E6405": {},
+      "E7200": {},
+      "E7300": {},
+      "E7400": {},
+      "E7500": {},
+      "E7600": {},
+      "E8190": {},
+      "E8200": {},
+      "E8290": {},
+      "E8300": {},
+      "E8400": {},
+      "E8500": {},
+      "E8600": {},
+      "E8700": {}
+    },
+    "Core 2 Quad": {
+      "Q6400": {},
+      "Q6600": {},
+      "Q6700": {},
+      "Q8200": {}
+    }
+  }
+}
