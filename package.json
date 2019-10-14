@@ -6,7 +6,8 @@
     "react": "^16.10.2",
     "react-burger-menu": "^2.6.11",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-search-box": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

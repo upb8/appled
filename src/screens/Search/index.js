@@ -22,8 +22,10 @@ function Search() {
             </div>
       </div>
      </div>
-     
+     <div className="searchBox">
      <SearchComponent />
+     </div>
+     
     </div>
   );
 }

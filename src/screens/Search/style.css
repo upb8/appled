@@ -143,4 +143,9 @@
     text-decoration: none;
     transition: color 0.4s ease;
   }
+
+  .searchBox{
+    width: 50%;
+    height: 1vh;
+  }
   
