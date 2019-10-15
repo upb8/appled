@@ -5,8 +5,9 @@ import dhon from '../../res/parts/autoComplete';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import theme from './theme.css';
-
 import Autosuggest from 'react-autosuggest';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
 // Imagine you have a list of languages that you'd like to autosuggest.
 const autosuggest = [
@@ -51,6 +52,7 @@ const autosuggest = [
 const options = [
   'one', 'two', 'two', 'three'
 ]
+
 
 // Teach Autosuggest how to calculate suggestions for any given input value.
 const getSuggestions = value => {
@@ -132,10 +134,10 @@ export default class Search extends React.Component {
     // Finally, render it!
     return (
       <div>
-        <div>
+        <div className="labelMain">
           <label className="label">
             Hackintosh guide (Dummy text)
-        </label>
+          </label>
         </div>
         <div className="searchContainerHolder">
           <div className="searchContainer">
@@ -160,7 +162,11 @@ export default class Search extends React.Component {
 
             </div>
             <div className="searchButton">
-              <p>lalal</p>
+            
+              <Button variant="contained" className="uploadBtn"  >
+                Search
+              </Button>
+           
             </div>
           </div>
         </div>

@@ -1,9 +1,16 @@
 
-.label{
+.labelMain{
    color: white;
    font-size: 4vh;
    font-weight: 400;
+   text-align: center;
+   margin-top: 300px;
 }
+
+.label{
+  
+}
+
 .searchContainerHolder{
    padding-top: 20%;
 }
@@ -13,14 +20,14 @@
    
 }
 .searchDropdown{
-   background: green;
+  
    width: 25%;
    float: left;
    height: 13vh;
    opacity: .5;
 }
 .searchBox{
-   background: red;
+   
    width: 50%;
    float: left;
    height: 13vh;
@@ -28,7 +35,7 @@
   
 }
 .searchButton{
-   background: white;
+ 
    width: 25%;
    float: right;
    height: 13vh;
@@ -69,4 +76,10 @@
 
 .as{
    width: 400px;
+}
+
+.uploadBtn{
+  top:15%;
+  width: 40%;
+  height: 70%;
 }
