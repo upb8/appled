@@ -3,7 +3,7 @@ import './style.css';
 
 function SearchResult() {
   return (
-    <div >
+    <div className="mainContainer">
     Search result
     </div>
   );
