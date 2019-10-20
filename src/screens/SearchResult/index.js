@@ -1,6 +1,10 @@
 import React from 'react';
 import './style.css';
 
+const imageClick = () => {
+  alert("click hoise")
+} 
+
 function SearchResult() {
   return (
     <div className="mainContainer">
@@ -14,14 +18,14 @@ function SearchResult() {
       </div>
       <div className="shopLinks">
         <div className="first">
-         <img src={'http://pngimg.com/uploads/amazon/amazon_PNG5.png'} className="firstImg"/>
+         <img src={'http://pngimg.com/uploads/amazon/amazon_PNG5.png'} className="firstImg" onClick={() => imageClick()}/>
         </div>
         <div className="second">
-        <img src={'https://images-eu.ssl-images-amazon.com/images/I/413RHWsREDL.png'} className="secondImg"/>
+        <img src={'https://images-eu.ssl-images-amazon.com/images/I/413RHWsREDL.png'} className="secondImg" onClick={() => imageClick()}/>
         
         </div>
         <div className="third">
-        <img src={'https://promotions.newegg.com/nepro/19-1326/images/imgs/newegglogo.png'} className="thirdImg"/>
+        <img src={'https://promotions.newegg.com/nepro/19-1326/images/imgs/newegglogo.png'} className="thirdImg" onClick={() => imageClick()}/>
         </div>
       </div>
     </div>

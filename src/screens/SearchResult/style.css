@@ -42,18 +42,21 @@
 width: 33%;
 float: left;
 text-align: center;
+cursor: pointer; 
 }
 
 .second{
 width: 33%;
 float: left;
 text-align: center;
+cursor: pointer; 
 }
 
 .third{
   width: 33%;
   float: right;
   text-align: center;
+  cursor: pointer; 
 }
 
 .firstImg{
