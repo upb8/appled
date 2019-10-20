@@ -8,6 +8,7 @@ import theme from './theme.css';
 import Autosuggest from 'react-autosuggest';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { withRouter } from 'react-router-dom';
 
 // Imagine you have a list of languages that you'd like to autosuggest.
 const autosuggest = [
@@ -85,7 +86,7 @@ const renderSuggestion = suggestion => {
   );
 };
 
-export default class Search extends React.Component {
+class Search extends React.Component {
   constructor() {
     super();
 
@@ -165,7 +166,7 @@ export default class Search extends React.Component {
             </div>
             <div className="searchButton">
             
-              <Button variant="contained" className="uploadBtn"  >
+              <Button variant="contained" className="uploadBtn" onClick={()=>this.props.history.push('/result')} >
                 Search
               </Button>
            
@@ -178,3 +179,5 @@ export default class Search extends React.Component {
     );
   }
 }
+
+export default withRouter(Search);
