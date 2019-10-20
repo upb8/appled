@@ -34,12 +34,12 @@ function SearchResult() {
     <div className="rightContainer">
      <div className="hackintoshCompatibility">
        <div className="leftImgHolder">
-       <img src={'https://cdn.pixabay.com/photo/2017/01/13/01/22/ok-1976099__340.png'} className="tickImg"/>
-      </div>
+         <img src={'https://cdn.pixabay.com/photo/2017/01/13/01/22/ok-1976099__340.png'} className="tickImg"/>
+       </div>
        <div className="rightH1Holder">
-       <text className="comText">
-          Hackintosh compatible
-       </text>
+        <text className="comText">
+            Hackintosh compatible
+        </text>
        </div>
       </div>
       <div className="techSpecs">
