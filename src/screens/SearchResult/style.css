@@ -3,3 +3,70 @@
   height: 98.2vh; 
   opacity: .95;
 }
+
+.leftContainer{
+  background-color: red;
+  width: 30%;
+  float: left;
+  height: 100%;
+}
+
+.rightContainer{
+  background-color: green;
+  width: 70%;
+  float: right;
+  height: 100%;
+}
+
+.img{
+  height: 50%;
+  width: 80%;
+  padding-left: 10%;
+  padding-top: 2%;
+}
+
+.sideText{
+  width: 40%;
+  background-color: pink;
+  float: left;
+}
+
+.shopLinks{
+  
+  width: 60%;
+  background-color: blue;
+  float: right;
+}
+
+.first{
+width: 33%;
+float: left;
+text-align: center;
+}
+
+.second{
+width: 33%;
+float: left;
+text-align: center;
+}
+
+.third{
+  width: 33%;
+  float: right;
+  text-align: center;
+}
+
+.firstImg{
+  height: 40%;
+  width: 40%;
+}
+
+.secondImg{
+  height: 35%;
+  width: 35%;
+}
+
+.thirdImg{
+  height: 70%;
+  width: 70%;
+}
