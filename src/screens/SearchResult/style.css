@@ -5,7 +5,6 @@
 }
 
 .leftContainer{
-  background-color: red;
   width: 30%;
   float: left;
   height: 100%;
@@ -26,15 +25,12 @@
 }
 
 .sideText{
-  width: 40%;
-  background-color: pink;
+  width: 60%;
   float: left;
 }
 
 .shopLinks{
-  
-  width: 60%;
-  background-color: blue;
+  width: 40%;
   float: right;
 }
 
@@ -72,4 +68,31 @@ cursor: pointer;
 .thirdImg{
   height: 70%;
   width: 70%;
+}
+
+.tickImg{
+  height: 80%;
+  width: 80%;
+}
+
+.leftImgHolder{
+background-color: red;
+width: 10%;
+float: left;
+}
+
+.rightH1Holder{
+background-color: yellow;
+width: 90%;
+float: right;
+}
+
+.comText{
+  font-size: 4.5vw;
+  font-weight: 200;
+}
+
+.techSpecs{
+  background-color: pink;
+  margin-top: 10%;
 }

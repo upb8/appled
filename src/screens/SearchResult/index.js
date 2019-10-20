@@ -8,6 +8,7 @@ const imageClick = () => {
 function SearchResult() {
   return (
     <div className="mainContainer">
+
     <div className="leftContainer">
       <img src={'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6305/6305798cv12d.jpg'} className="img"/>
       <h3>
@@ -25,12 +26,30 @@ function SearchResult() {
         
         </div>
         <div className="third">
-        <img src={'https://promotions.newegg.com/nepro/19-1326/images/imgs/newegglogo.png'} className="thirdImg" onClick={() => imageClick()}/>
+        <img src={'https://c1.neweggimages.com/WebResource/Themes/2005/Nest/logo_424x210.png'} className="thirdImg" onClick={() => imageClick()}/>
         </div>
       </div>
     </div>
+
     <div className="rightContainer">
-     hi
+     <div className="hackintoshCompatibility">
+       <div className="leftImgHolder">
+       <img src={'https://cdn.pixabay.com/photo/2017/01/13/01/22/ok-1976099__340.png'} className="tickImg"/>
+      </div>
+       <div className="rightH1Holder">
+       <text className="comText">
+          Hackintosh compatible
+       </text>
+       </div>
+      </div>
+      <div className="techSpecs">
+        <h2>
+          Technical Details
+        </h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
     </div>
     </div>
   );
