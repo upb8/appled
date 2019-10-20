@@ -134,11 +134,13 @@ export default class Search extends React.Component {
     // Finally, render it!
     return (
       <div>
+        
         <div className="labelMain">
           <label className="label">
             Hackintosh guide (Dummy text)
           </label>
         </div>
+
         <div className="searchContainerHolder">
           <div className="searchContainer">
             <div className="searchDropdown">
