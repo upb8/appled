@@ -1,14 +1,25 @@
 import React from 'react';
 import './style.css';
+import { withRouter } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 const imageClick = () => {
   alert("click hoise")
 } 
 
-function SearchResult() {
+function HomeButton() {
+  let history = useHistory();
+
+  function handleClick() {
+    history.push("/");
+  }
+
+  export default function SearchResult() {
   return (
     <div className="mainContainer">
-
+      <div>
+      <img src={'https://static.thenounproject.com/png/1410611-200.png'} className="backImg" onClick={handleClick}/>
+      </div>
     <div className="leftContainer">
       <img src={'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6305/6305798cv12d.jpg'} className="img"/>
       <h3>
@@ -69,4 +80,4 @@ function SearchResult() {
   );
 }
 
-export default SearchResult;
+
