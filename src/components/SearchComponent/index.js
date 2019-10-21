@@ -4,7 +4,7 @@ import ReactSearchBox from 'react-search-box';
 import dhon from '../../res/parts/autoComplete';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-import theme from './theme.css';
+import './theme.css';
 import Autosuggest from 'react-autosuggest';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -129,7 +129,7 @@ class Search extends React.Component {
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = {
-      placeholder: 'Type a programming language',
+      placeholder: 'Enter Part Name',
       value,
       onChange: this.onChange
     };
@@ -137,7 +137,7 @@ class Search extends React.Component {
     // Finally, render it!
     return (
       <div>
-        
+
         <div className="labelMain">
           <label className="label">
             Hackintosh guide (Dummy text)
@@ -147,14 +147,13 @@ class Search extends React.Component {
         <div className="searchContainerHolder">
           <div className="searchContainer">
             <div className="searchDropdown">
-            <div className="mainDropdown">
-            <Dropdown arrowClassName='myArrowClassName' placeholderClassName='myPlaceholderClassName' className='mainClassName' controlClassName='myClassName' options={options} placeholder="Select an option" />;
+              <div className="mainDropdown">
+                <Dropdown arrowClassName='myArrowClassName' placeholderClassName='myPlaceholderClassName' className='mainClassName' controlClassName='myClassName' options={options} placeholder="Any Type" />;
             </div>
             </div>
             <div className="searchBox">
               <div className="rsb">
                 <Autosuggest
-                  theme={theme}
                   suggestions={suggestions}
                   onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
                   onSuggestionsClearRequested={this.onSuggestionsClearRequested}
@@ -167,11 +166,11 @@ class Search extends React.Component {
 
             </div>
             <div className="searchButton">
-            
-              <Button variant="contained" className="uploadBtn" onClick={()=>this.props.history.push('/result')} >
+
+              <Button variant="contained" className="uploadBtn" onClick={() => this.props.history.push('/result')} >
                 Search
               </Button>
-           
+
             </div>
           </div>
         </div>
