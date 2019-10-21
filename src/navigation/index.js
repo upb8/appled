@@ -12,7 +12,6 @@ import Result from '../screens/SearchResult';
 export default function Navigation() {
   return (
     <Router>
-     
         <Switch>
           <Route exact path="/">
             <Home />

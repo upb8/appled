@@ -124,6 +124,8 @@ class Search extends React.Component {
 
   render() {
     const { value, suggestions } = this.state;
+    console.log(this.props)
+
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = {

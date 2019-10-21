@@ -1,20 +1,18 @@
 import React from 'react';
 import './style.css';
-import { withRouter } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
 const imageClick = () => {
   alert("click hoise")
 } 
 
-function HomeButton() {
-  let history = useHistory();
+  
 
+function SearchResult() {
+  let history = useHistory();
   function handleClick() {
     history.push("/");
   }
-
-  export default function SearchResult() {
   return (
     <div className="mainContainer">
       <div>
@@ -48,16 +46,16 @@ function HomeButton() {
          <img src={'https://cdn.pixabay.com/photo/2017/01/13/01/22/ok-1976099__340.png'} className="tickImg"/>
        </div>
        <div className="rightH1Holder">
-        <text className="comText">
+        <div className="comdiv">
             Hackintosh compatible
-        </text>
+        </div>
        </div>
       </div>
       <div className="techSpecs">
         <h2>
           Technical Details
         </h2>
-        <p>
+        
           <ul>
 
           <li>Supports 9th and 8th Gen Intel® Core™ Processors</li>
@@ -73,11 +71,11 @@ function HomeButton() {
           <li>Supports 9th and 8th Gen Intel® Core™ Processors</li>
           <li>Supports 9th and 8th Gen Intel® Core™ Processors</li>
           </ul>
-        </p>
+        
       </div>
     </div>
     </div>
   );
 }
 
-
+export default SearchResult;
