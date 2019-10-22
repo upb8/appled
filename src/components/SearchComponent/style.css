@@ -1,87 +1,108 @@
-
-.labelMain{
-   color: white;
-   font-size: 4vh;
-   font-weight: 400;
-   text-align: center;
-   
+.labelMain {
+  color: white;
+  font-size: 4vh;
+  font-weight: 400;
+  text-align: center;
 }
 
-.label{
-   margin-top: 900px;
+.label {
+  margin-top: 900px;
 }
 
-.searchContainerHolder{
-   padding-top: 20%;
-}
-.searchContainer{
-   width: 100%;
-   background: white;
-   
-}
-.searchDropdown{
-  
-   width: 25%;
-   float: left;
-   height: 13vh;
-   opacity: .9;
-}
-.searchBox{
-   
-   width: 50%;
-   float: left;
-   height: 56.5px;
-   opacity: .9;
-  
-}
-.searchButton{
- 
-   width: 25%;
-   float: right;
-   height: 56.5px;
-   opacity: .9;
+.searchContainerHolder {
+  padding-top: 30vh;
 }
 
-.rsb{
-  padding-top: 1.9%;
+/* .searchContainer {
+  width: 100%;
+  background: white;
+} */
+/* .searchDropdown {
+  width: 25%;
+  float: left;
+  height: 13vh;
+  opacity: 0.9;
+} */
+/* .searchBox {
+  width: 50%;
+  float: left;
+  height: 56.5px;
+  opacity: 0.9;
+} */
+/* .searchButton {
+  width: 25%;
+  float: right;
+  height: 56.5px;
+  opacity: 0.9;
+} */
+
+.rsb {
+  /* height: px; */
 }
 
-.mainDropdown{
-   padding-top: 4%;
-   
+.meta {
+  padding: 33rem;
 }
 
-.myClassName{
-   width: 55%;
-   height: 56.5px;
-   float: right;
-   text-align: center;
-   align-items: center;
+.margin-ato {
+  margin: 0 5%;
 }
 
-.mainClassName{
-   border-width: 10px;
-   border-color: white;
-   border-radius: 360px;
-   font-size: 25px;
+@media (max-width: 500px) {
+  .margin-ato {
+    margin: 0 5%;
+  }
 }
 
-.myPlaceholderClassName{
+#btn {
+  width: 100%;
+}
+
+.mainDropdown {
+  /* padding-top: 4%; */
+  width: 100%;
+  height: 56px;
+}
+
+.input-width {
+  width: 96%;
+}
+/* 
+.myClassName {
+  width: 55%;
+  height: 56.5px;
+  float: right;
+  text-align: center;
+  align-items: center;
+} */
+
+.mainClassName {
+  border-width: 10px;
+  border-color: white;
+  border-radius: 360px;
+  font-size: 25px;
+}
+
+/* .myPlaceholderClassName {
   padding-top: 5px;
+} */
+
+/* .myArrowClassName {
+  margin-top: 13px;
+} */
+
+.as {
+  width: 400px;
 }
 
-.myArrowClassName{
-   margin-top: 13px;
-}
-
-.as{
-   width: 400px;
-}
-
-.uploadBtn{
-  top: 14px;
-  left: 22.5px;
+.uploadBtn {
+  /* top: 14px;
+  left: 22.5px; */
   width: 50%;
   height: 56.5px;
   font-size: 25px;
 }
+/* 
+div.Dropdown-root.mainClassName {
+  height: 56px;
+} */
