@@ -9,40 +9,54 @@ import Autosuggest from 'react-autosuggest';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { withRouter } from 'react-router-dom';
+import image1 from '../../res/img/thumbs/e4200.jpg';
 
 // Imagine you have a list of languages that you'd like to autosuggest.
 const autosuggest = [
   {
+    image: '',
     name: "lga775",
     component: "cpu",
     type: "Core 2 Duo",
     id: [1, 2, 3],
   },
   {
+    image: image1,
     name: 'E4200',
     component: "cpu",
     type: "Core 2 Duo",
     id: [2]
   },
   {
+    image: '',
+    name: 'E5200',
+    component: 'cpu',
+    type: 'i5',
+    id: [4]
+  },
+  {
+    image: '',
     name: 'January 2007',
     component: "cpu",
     type: "Core 2 Duo",
     id: [3]
   },
   {
+    image: '',
     name: 'Core 2 Duo',
     component: "cpu",
     type: "Core 2 Duo",
     id: [3]
   },
   {
+    image: '',
     name: 'HH80557PG0332M',
     component: "cpu",
     type: "Core 2 Duo",
     id: [1]
   },
   {
+    image: '',
     name: 'BX80557E4300',
     component: "cpu",
     type: "Core 2 Duo",
@@ -71,6 +85,8 @@ const getSuggestions = value => {
 const getSuggestionValue = suggestion => suggestion.name;
 
 
+
+//this is the render function for suggestion
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => {
   console.log(suggestion)
@@ -79,13 +95,13 @@ const renderSuggestion = suggestion => {
       {
         suggestion.id.map((component, i) =>
           <div key={component.toString()}>
-            {suggestion.component} - {suggestion.type} - {suggestion.name}
+            <img src={suggestion.image} width="40" height="40"></img> - {suggestion.component} - {suggestion.type} - {suggestion.name}
           </div>)
       }
     </div>
   );
 };
-
+ 
 class Search extends React.Component {
   constructor() {
     super();
