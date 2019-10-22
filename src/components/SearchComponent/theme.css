@@ -38,11 +38,12 @@
             width:              100%;
             min-width:          160px;
             margin-left:        1px;
-            background-color: #FFFFFF;
+            background-color:   whitesmoke;
             border-radius:      0 0 4px 4px;
             z-index:            2;
             box-shadow:         0 6px 12px rgba(0, 0, 0, 0.175);
-		    background-clip:    padding-box;
+            background-clip:    padding-box;
+            
         }
           
         .react-autosuggest__suggestions-list 
@@ -63,7 +64,7 @@
             background-color: White;
         }
         .react-autosuggest__input {
-            font-size: 25px;
+            font-size: 30px;
         }
          /* container:                'react-autosuggest__container',
   containerOpen:            'react-autosuggest__container--open',
