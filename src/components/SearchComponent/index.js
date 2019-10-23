@@ -82,13 +82,19 @@ const getSuggestions = value => {
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
 // input value for every given suggestion.
 const getSuggestionValue = suggestion => {
+  //sets the value of the search box to the selected item
+  // this.setState = {
+  //   name: suggestion.name,
+  //   image: suggestion.image,
+  //   type: suggestion.type,
+  //   component: suggestion.component
+  // };
   return suggestion.type + " " + suggestion.name;
 };
 
 //this is the render function for suggestion
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => {
-  console.log(suggestion);
   return (
     <div>
       {suggestion.id.map((component, i) => (
@@ -116,14 +122,21 @@ class Search extends React.Component {
     // and they are initially empty because the Autosuggest is closed.
     this.state = {
       value: "",
-      suggestions: []
+      image: "",
+      name: "",
+      component: "",
+      type: "",
+      suggestions: [],
+      item_info: []
     };
   }
 
   onChange = (event, { newValue }) => {
     this.setState({
-      value: newValue
+      value: newValue,
+      item_info: newValue
     });
+    console.log(newValue);
   };
 
   handleChange(e) {
@@ -148,6 +161,7 @@ class Search extends React.Component {
   render() {
     const { value, suggestions } = this.state;
     console.log(this.props);
+    //console.log(this.state.component);
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = {
@@ -196,7 +210,11 @@ class Search extends React.Component {
                 id="btn"
                 variant="contained"
                 className="uploadBtn"
-                onClick={() => this.props.history.push("/result")}
+                onClick={() =>
+                  this.props.history.push("/result", {
+                    item: this.state.item_info
+                  })
+                }
               >
                 Search
               </Button>
