@@ -1,110 +1,105 @@
-.mainContainer{
+.mainContainer {
   background-color: white;
-  height: 98.2vh; 
-  opacity: .95;
+  height: 98.2vh;
+  opacity: 0.95;
 }
 
-.leftContainer{
+.leftContainer {
   width: 30%;
   float: left;
   height: 100%;
 }
 
-.rightContainer{
+.rightContainer {
   width: 70%;
   float: right;
   height: 100%;
 }
 
-.img{
+.img {
   height: 50%;
   width: 80%;
   padding-left: 10%;
   padding-top: 2%;
 }
 
-.sideText{
+.sideText {
   width: 60%;
   float: left;
 }
 
-.shopLinks{
+.shopLinks {
   width: 40%;
   float: right;
 }
 
-.first{
-width: 33%;
-float: left;
-text-align: center;
-cursor: pointer; 
+.first {
+  width: 33%;
+  float: left;
+  text-align: center;
+  cursor: pointer;
 }
 
-.second{
-width: 33%;
-float: left;
-text-align: center;
-cursor: pointer; 
+.second {
+  width: 33%;
+  float: left;
+  text-align: center;
+  cursor: pointer;
 }
 
-.third{
+.third {
   width: 33%;
   float: right;
   text-align: center;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-.firstImg{
+.firstImg {
   height: 40%;
   width: 40%;
 }
 
-.secondImg{
+.secondImg {
   height: 35%;
   width: 35%;
 }
 
-.thirdImg{
+.thirdImg {
   height: 70%;
   width: 70%;
 }
 
-.tickImg{
+.tickImg {
   height: 80%;
   width: 80%;
   margin-top: 4%;
- 
 }
 
-.leftImgHolder{
-
-width: 10%;
-float: left;
+.leftImgHolder {
+  width: 10%;
+  float: left;
 }
 
-.rightH1Holder{
-
-width: 90%;
-float: right;
+.rightH1Holder {
+  width: 90%;
+  float: right;
 }
 
-.comText{
+.comText {
   font-size: 4.5vw;
   font-weight: 200;
-  
 }
 
-.techSpecs{
+.techSpecs {
   background-color: pink;
   margin-top: 15%;
- 
 }
 
-.hackintoshCompatibility{
+.hackintoshCompatibility {
   margin-top: 3%;
 }
 
-.backImg{
+.backImg {
   height: 5%;
   width: 5%;
 }

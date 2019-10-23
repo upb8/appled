@@ -1,30 +1,20 @@
 import React from "react";
 import "./style.css";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import ReactSearchBox from "react-search-box";
-import dhon from "../../res/parts/autoComplete";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import "./theme.css";
 import Autosuggest from "react-autosuggest";
-import {
-  createMuiTheme,
-  withStyles,
-  makeStyles,
-  ThemeProvider
-} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { withRouter } from "react-router-dom";
 
-
 //importinng the images for showing in the auto-suggestions
-import image1 from '../../res/img/thumbs/e4200.jpg';
+import image1 from "../../res/img/thumbs/e4200.jpg";
 
 // Imagine you have a list of languages that you'd like to autosuggest.
 const autosuggest = [
   {
-    image: '',
+    image: "",
     name: "lga775",
     component: "cpu",
     type: "Core 2 Duo",
@@ -32,42 +22,42 @@ const autosuggest = [
   },
   {
     image: image1,
-    name: 'E4200',
+    name: "E4200",
     component: "CPU",
     type: "Core 2 Duo",
     id: [2]
   },
   {
-    image: '',
-    name: 'E5200',
-    component: 'CPU',
-    type: 'i5',
+    image: "",
+    name: "E5200",
+    component: "CPU",
+    type: "i5",
     id: [4]
   },
   {
-    image: '',
-    name: 'January 2007',
+    image: "",
+    name: "January 2007",
     component: "cpu",
     type: "Core 2 Duo",
     id: [3]
   },
   {
-    image: '',
-    name: 'Core 2 Duo',
+    image: "",
+    name: "Core 2 Duo",
     component: "cpu",
     type: "Core 2 Duo",
     id: [3]
   },
   {
-    image: '',
-    name: 'HH80557PG0332M',
+    image: "",
+    name: "HH80557PG0332M",
     component: "cpu",
     type: "Core 2 Duo",
     id: [1]
   },
   {
-    image: '',
-    name: 'BX80557E4300',
+    image: "",
+    name: "BX80557E4300",
     component: "cpu",
     type: "Core 2 Duo",
     id: [1]
@@ -93,8 +83,7 @@ const getSuggestions = value => {
 // input value for every given suggestion.
 const getSuggestionValue = suggestion => {
   return suggestion.type + " " + suggestion.name;
-}
-
+};
 
 //this is the render function for suggestion
 // Use your imagination to render suggestions.
@@ -102,34 +91,19 @@ const renderSuggestion = suggestion => {
   console.log(suggestion);
   return (
     <div>
-      {
-        suggestion.id.map((component, i) =>
-          <div className="flex-container" key={component.toString()}>
-            <div>
-              <img src={suggestion.image} width="50" height="50"></img> 
-            </div>
-            <div className="auto-suggestion-text" key={component.toString()}> 
-              {suggestion.component} - {suggestion.type} {suggestion.name}
-            </div>
+      {suggestion.id.map((component, i) => (
+        <div className="renderSuggestion" key={component.toString()}>
+          <div>
+            <img src={suggestion.image} width="50" height="50"></img>
           </div>
-          
-
-        )
-      }
+          <div className="auto-suggestion-text" key={component.toString()}>
+            {suggestion.component} - {suggestion.type} {suggestion.name}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary
-  }
-}));
 
 class Search extends React.Component {
   constructor() {
@@ -149,12 +123,10 @@ class Search extends React.Component {
   onChange = (event, { newValue }) => {
     this.setState({
       value: newValue
-      
-      
     });
   };
 
-   handleChange(e) {
+  handleChange(e) {
     console.log(e.target.value);
   }
 
@@ -187,97 +159,43 @@ class Search extends React.Component {
     // Finally, render it!
     return (
       <div>
-        <div className='labelMain'>
-          <label className='label'>Hackintosh guide (Dummy text)</label>
+        <div className="labelMain">
+          <label className="label">Hackintosh guide (Dummy text)</label>
         </div>
 
-        <div className='searchContainerHolder' style={{ margin: "0 7%" }}>
-          {/* <Grid
-            container
-            direction='row'
-            justify='center'
-            alignItems='center'
-            spacing={1}
-            className='margin-ato'
-            // padding={30}
-            // marginTop={0}
-            // marginBottom={0}
-            // marginLeft={5}
-            // marginRight={5}
-          >
-            <Grid item xs={12} sm={4} lg={4} className='searchDropdown'>
-              <div container className='mainDropdown'>
-                <Dropdown
-                  arrowClassName='myArrowClassName'
-                  placeholderClassName='myPlaceholderClassName'
-                  className='mainClassName'
-                  controlClassName='myClassName'
-                  options={options}
-                  placeholder='Any Type'
-                />
-              </div>
-            </Grid>
-            <Grid item xs={12} sm={4} lg={4} className='searchBox'>
-              <div className='rsb'>
-                <Autosuggest
-                  suggestions={suggestions}
-                  onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-                  onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-                  getSuggestionValue={getSuggestionValue}
-                  renderSuggestion={renderSuggestion}
-                  inputProps={inputProps}
-                  className='input-width'
-                />
-              </div>
-            </Grid>
-            <Grid item xs={12} sm={4} lg={4}>
-              <Button
-                variant='contained'
-                className='uploadBtn'
-                height={20}
-                onClick={() => this.props.history.push("/result")}
-              >
-                Search
-              </Button>
-            </Grid>
-          </Grid> */}
+        <div className="searchContainerHolder">
           <Grid
             container
-            direction='row'
-            justify='center'
-            alignItems='center'
-            className='margin-ato'
-            spacing={2}
+            direction="row"
+            justify="center"
+            alignItems="center"
+            spacing={1}
           >
-            <Grid item xs={12} sm={3} lg={3} className='searchDropdown'>
-              <div container className='mainDropdown'>
-                <Dropdown
-                  arrowClassName='myArrowClassName'
-                  placeholderClassName='myPlaceholderClassName'
-                  className='mainClassName'
-                  controlClassName='myClassName'
-                  options={options}
-                  placeholder='Any Type'
-                />
-              </div>
+            <Grid item xs={12} sm={3} lg={3} className="searchDropdown">
+              <Dropdown
+                arrowClassName="myArrowClassName"
+                placeholderClassName="myPlaceholderClassName"
+                className="mainClassName"
+                controlClassName="myClassName"
+                options={options}
+                placeholder="Type"
+              />
             </Grid>
-            <Grid item xs={12} sm={4} lg={6} className='searchBox'>
-              <div className='rsb'>
-                <Autosuggest
-                  suggestions={suggestions}
-                  onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-                  onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-                  getSuggestionValue={getSuggestionValue}
-                  renderSuggestion={renderSuggestion}
-                  inputProps={inputProps}
-                />
-              </div>
+            <Grid item xs={12} sm={7} lg={7} className="searchBox">
+              <Autosuggest
+                suggestions={suggestions}
+                onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                getSuggestionValue={getSuggestionValue}
+                renderSuggestion={renderSuggestion}
+                inputProps={inputProps}
+              />
             </Grid>
-            <Grid item xs={12} sm={4} lg={2}>
+            <Grid item xs={12} sm={2} lg={2}>
               <Button
-                id='btn'
-                variant='contained'
-                className='uploadBtn'
+                id="btn"
+                variant="contained"
+                className="uploadBtn"
                 onClick={() => this.props.history.push("/result")}
               >
                 Search
