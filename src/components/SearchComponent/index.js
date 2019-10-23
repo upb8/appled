@@ -182,6 +182,7 @@ class Search extends React.Component {
               steps={['Hello', 500, 'Hello world!', 500, 'Welcome to hackintosh guide', 1000, 'You can validate your device compitability in secs', 2000]}
               loop={Infinity}
               wrapper="p"
+              className="dummy"
             />
           </label>
         </div>

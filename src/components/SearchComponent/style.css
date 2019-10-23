@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
 
 .labelMain{
    color: white;
@@ -9,6 +15,7 @@
 
 .label{
    margin-top: 900px;
+   font-family: 'Roboto Mono', monospace;
 }
 
 .searchContainerHolder{
