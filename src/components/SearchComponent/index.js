@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 import { withRouter } from 'react-router-dom';
 import image1 from '../../res/img/thumbs/e4200.jpg';
 import { style } from '@material-ui/system';
+import Typical from 'react-typical';
 
 // Imagine you have a list of languages that you'd like to autosuggest.
 const autosuggest = [
@@ -177,7 +178,11 @@ class Search extends React.Component {
 
         <div className="labelMain">
           <label className="label">
-            Hackintosh guide (Dummy text)
+          <Typical
+              steps={['Hello', 500, 'Hello world!', 500, 'Welcome to hackintosh guide', 1000, 'You can validate your device compitability in secs', 2000]}
+              loop={Infinity}
+              wrapper="p"
+            />
           </label>
         </div>
 
