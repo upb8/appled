@@ -1,17 +1,25 @@
-import React from 'react';
-import './style.css';
-import ReactSearchBox from 'react-search-box';
-import dhon from '../../res/parts/autoComplete';
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
-import './theme.css';
-import Autosuggest from 'react-autosuggest';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import { withRouter } from 'react-router-dom';
+import React from "react";
+import "./style.css";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
+import ReactSearchBox from "react-search-box";
+import dhon from "../../res/parts/autoComplete";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
+import "./theme.css";
+import Autosuggest from "react-autosuggest";
+import {
+  createMuiTheme,
+  withStyles,
+  makeStyles,
+  ThemeProvider
+} from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import { withRouter } from "react-router-dom";
+
+
+//importinng the images for showing in the auto-suggestions
 import image1 from '../../res/img/thumbs/e4200.jpg';
-import { style } from '@material-ui/system';
-import Typical from 'react-typical';
 
 // Imagine you have a list of languages that you'd like to autosuggest.
 const autosuggest = [
@@ -20,7 +28,7 @@ const autosuggest = [
     name: "lga775",
     component: "cpu",
     type: "Core 2 Duo",
-    id: [1, 2, 3],
+    id: [1, 2, 3]
   },
   {
     image: image1,
@@ -63,22 +71,21 @@ const autosuggest = [
     component: "cpu",
     type: "Core 2 Duo",
     id: [1]
-  },
+  }
 ];
 
-const options = [
-  'one', 'two', 'two', 'three'
-]
-
+const options = ["one", "two", "two", "three"];
 
 // Teach Autosuggest how to calculate suggestions for any given input value.
 const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
   const inputLength = inputValue.length;
 
-  return inputLength === 0 ? [] : autosuggest.filter(lang =>
-    lang.name.toLowerCase().slice(0, inputLength) === inputValue
-  );
+  return inputLength === 0
+    ? []
+    : autosuggest.filter(
+        lang => lang.name.toLowerCase().slice(0, inputLength) === inputValue
+      );
 };
 
 // When suggestion is clicked, Autosuggest needs to populate the input
@@ -92,7 +99,7 @@ const getSuggestionValue = suggestion => {
 //this is the render function for suggestion
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => {
-  console.log(suggestion)
+  console.log(suggestion);
   return (
     <div>
       {
@@ -113,9 +120,17 @@ const renderSuggestion = suggestion => {
   );
 };
 
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    color: theme.palette.text.secondary
+  }
+}));
 
-
- 
 class Search extends React.Component {
   constructor() {
     super();
@@ -126,9 +141,8 @@ class Search extends React.Component {
     // Suggestions also need to be provided to the Autosuggest,
     // and they are initially empty because the Autosuggest is closed.
     this.state = {
-      value: '',
-      suggestions: [],
-      baal: '',
+      value: "",
+      suggestions: []
     };
   }
 
@@ -161,13 +175,11 @@ class Search extends React.Component {
 
   render() {
     const { value, suggestions } = this.state;
-    console.log(this.props)
-    console.log(value);
-
+    console.log(this.props);
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = {
-      placeholder: 'Enter Part Name',
+      placeholder: "Enter Part Name",
       value,
       onChange: this.onChange
     };
@@ -175,26 +187,38 @@ class Search extends React.Component {
     // Finally, render it!
     return (
       <div>
-
-        <div className="labelMain">
-          <label className="label">
-          <Typical
-              steps={['Hello', 500, 'Hello world!', 500, 'Welcome to hackintosh guide', 1000, 'You can validate your device compitability in secs', 2000]}
-              loop={Infinity}
-              wrapper="p"
-            />
-          </label>
+        <div className='labelMain'>
+          <label className='label'>Hackintosh guide (Dummy text)</label>
         </div>
 
-        <div className="searchContainerHolder">
-          <div className="searchContainer">
-            <div className="searchDropdown">
-              <div className="mainDropdown">
-                <Dropdown arrowClassName='myArrowClassName' placeholderClassName='myPlaceholderClassName' className='mainClassName' controlClassName='myClassName' options={options} placeholder="Any Type" />;
-            </div>
-            </div>
-            <div className="searchBox">
-              <div className="rsb">
+        <div className='searchContainerHolder' style={{ margin: "0 7%" }}>
+          {/* <Grid
+            container
+            direction='row'
+            justify='center'
+            alignItems='center'
+            spacing={1}
+            className='margin-ato'
+            // padding={30}
+            // marginTop={0}
+            // marginBottom={0}
+            // marginLeft={5}
+            // marginRight={5}
+          >
+            <Grid item xs={12} sm={4} lg={4} className='searchDropdown'>
+              <div container className='mainDropdown'>
+                <Dropdown
+                  arrowClassName='myArrowClassName'
+                  placeholderClassName='myPlaceholderClassName'
+                  className='mainClassName'
+                  controlClassName='myClassName'
+                  options={options}
+                  placeholder='Any Type'
+                />
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={4} lg={4} className='searchBox'>
+              <div className='rsb'>
                 <Autosuggest
                   suggestions={suggestions}
                   onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -202,23 +226,65 @@ class Search extends React.Component {
                   getSuggestionValue={getSuggestionValue}
                   renderSuggestion={renderSuggestion}
                   inputProps={inputProps}
-                  onChange={(e) => {this.handleChange(e)}}
+                  className='input-width'
                 />
               </div>
-
-
-            </div>
-            <div className="searchButton">
-
-              <Button variant="contained" className="uploadBtn" onClick={() => this.props.history.push('/result')} >
+            </Grid>
+            <Grid item xs={12} sm={4} lg={4}>
+              <Button
+                variant='contained'
+                className='uploadBtn'
+                height={20}
+                onClick={() => this.props.history.push("/result")}
+              >
                 Search
               </Button>
-
-            </div>
-          </div>
+            </Grid>
+          </Grid> */}
+          <Grid
+            container
+            direction='row'
+            justify='center'
+            alignItems='center'
+            className='margin-ato'
+            spacing={2}
+          >
+            <Grid item xs={12} sm={3} lg={3} className='searchDropdown'>
+              <div container className='mainDropdown'>
+                <Dropdown
+                  arrowClassName='myArrowClassName'
+                  placeholderClassName='myPlaceholderClassName'
+                  className='mainClassName'
+                  controlClassName='myClassName'
+                  options={options}
+                  placeholder='Any Type'
+                />
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={4} lg={6} className='searchBox'>
+              <div className='rsb'>
+                <Autosuggest
+                  suggestions={suggestions}
+                  onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                  onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                  getSuggestionValue={getSuggestionValue}
+                  renderSuggestion={renderSuggestion}
+                  inputProps={inputProps}
+                />
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={4} lg={2}>
+              <Button
+                id='btn'
+                variant='contained'
+                className='uploadBtn'
+                onClick={() => this.props.history.push("/result")}
+              >
+                Search
+              </Button>
+            </Grid>
+          </Grid>
         </div>
-
-
       </div>
     );
   }
