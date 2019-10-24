@@ -4,7 +4,7 @@ import SearchComponent from "../../components/SearchComponent";
 
 function Search() {
   return (
-    <div>
+    <div className="search">
       <div>
         <SearchComponent />
       </div>

@@ -6,10 +6,12 @@ import "react-dropdown/style.css";
 import "./theme.css";
 import Autosuggest from "react-autosuggest";
 import Button from "@material-ui/core/Button";
+
 import { withRouter } from "react-router-dom";
 
 //importinng the images for showing in the auto-suggestions
 import image1 from "../../res/img/thumbs/e4200.jpg";
+import Helper from "../Helper";
 
 // Imagine you have a list of languages that you'd like to autosuggest.
 const autosuggest = [
@@ -178,48 +180,61 @@ class Search extends React.Component {
         </div>
 
         <div className="searchContainerHolder">
-          <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="center"
-            spacing={1}
-          >
-            <Grid item xs={12} sm={3} lg={3} className="searchDropdown">
-              <Dropdown
-                arrowClassName="myArrowClassName"
-                placeholderClassName="myPlaceholderClassName"
-                className="mainClassName"
-                controlClassName="myClassName"
-                options={options}
-                placeholder="Type"
-              />
-            </Grid>
-            <Grid item xs={12} sm={7} lg={7} className="searchBox">
-              <Autosuggest
-                suggestions={suggestions}
-                onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-                onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-                getSuggestionValue={getSuggestionValue}
-                renderSuggestion={renderSuggestion}
-                inputProps={inputProps}
-              />
-            </Grid>
-            <Grid item xs={12} sm={2} lg={2}>
-              <Button
-                id="btn"
-                variant="contained"
-                className="uploadBtn"
-                onClick={() =>
-                  this.props.history.push("/result", {
-                    item: this.state.item_info
-                  })
-                }
+          <Grid container direction="row">
+            {/* 1 */}
+            <Grid item xs={12} sm={1} md={1} lg={1}></Grid>
+            {/* 2 */}
+            <Grid item xs={12} sm={10} md={10} lg={10}>
+              <Grid
+                container
+                direction="row"
+                justify="center"
+                alignItems="center"
               >
-                Search
-              </Button>
+                <Grid item xs={12} sm={3} md={3} lg={3}>
+                  <Dropdown
+                    arrowClassName="dropDownArrow"
+                    placeholderClassName="dropDownPlaceholder"
+                    className="dropDown"
+                    controlClassName="dropDownControl"
+                    options={options}
+                    placeholder="Type"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={7} md={7} lg={7}>
+                  <Autosuggest
+                    suggestions={suggestions}
+                    onSuggestionsFetchRequested={
+                      this.onSuggestionsFetchRequested
+                    }
+                    onSuggestionsClearRequested={
+                      this.onSuggestionsClearRequested
+                    }
+                    getSuggestionValue={getSuggestionValue}
+                    renderSuggestion={renderSuggestion}
+                    inputProps={inputProps}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={2} md={2} lg={2}>
+                  <Button
+                    id="btn"
+                    variant="contained"
+                    className="uploadBtn"
+                    onClick={() =>
+                      this.props.history.push("/result", {
+                        item: this.state.item_info
+                      })
+                    }
+                  >
+                    Search
+                  </Button>
+                </Grid>
+              </Grid>
             </Grid>
+            {/* 3 */}
+            <Grid item xs={12} sm={1} md={1} lg={1}></Grid>
           </Grid>
+          <Helper />
         </div>
       </div>
     );
