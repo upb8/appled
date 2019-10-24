@@ -1,0 +1,42 @@
+.helper {
+  margin: 10rem 0;
+}
+
+/* Paper */
+.paper {
+  height: 300px;
+  box-sizing: border-box;
+}
+
+.paper:hover {
+  background: #db5151;
+  transition: 300ms;
+}
+
+.paper h1 {
+  margin: 0;
+}
+
+.paper-content {
+  width: 100%;
+  height: 100%;
+}
+
+.paper-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.paper-text {
+  height: 20%;
+  text-align: center;
+}
+
+/* Material UI Icons */
+
+.material-icons {
+  text-align: center;
+  font-size: 10rem;
+}
