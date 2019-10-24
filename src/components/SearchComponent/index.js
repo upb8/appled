@@ -15,7 +15,10 @@ import {
   ThemeProvider
 } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import image1 from '../../res/img/thumbs/e4200.jpg';
+import { style } from '@material-ui/system';
 import { withRouter } from "react-router-dom";
+import Typical from 'react-typical';
 
 // Imagine you have a list of languages that you'd like to autosuggest.
 const autosuggest = [
@@ -183,8 +186,15 @@ class Search extends React.Component {
     // Finally, render it!
     return (
       <div>
-        <div className='labelMain'>
-          <label className='label'>Hackintosh guide (Dummy text)</label>
+        <div className="labelMain">
+          <label className="label">
+          <Typical
+              steps={['Hello', 500, 'Hello world!', 500, 'Welcome to hackintosh guide', 1000, 'You can validate your device compitability in secs', 2000]}
+              loop={Infinity}
+              wrapper="p"
+              className="dummy"
+            />
+          </label>
         </div>
 
         <div className='searchContainerHolder' style={{ margin: "0 7%" }}>
