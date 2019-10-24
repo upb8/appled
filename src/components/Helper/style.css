@@ -5,6 +5,7 @@
 /* Paper */
 .paper:hover {
   background: #db5151;
+  color: whitesmoke;
 }
 
 .paper h1 {
