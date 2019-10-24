@@ -65,8 +65,15 @@
   width: 400px;
 } */
 
-/* Search Container Holder */
+/* Header Text */
+.labelMain {
+  color: white;
+  font-size: 4vh;
+  font-weight: 400;
+  text-align: center;
+}
 
+/* Search Container Holder */
 .searchContainerHolder {
   padding-top: 30vh;
   /* max-width: 1200px;
@@ -74,7 +81,6 @@
 }
 
 /* Dropdown Style */
-
 .dropDown {
   width: 100%;
   height: 56px;
@@ -109,16 +115,8 @@
 }
 
 /* Search Input  */
-
 .input-width {
   width: 96%;
-}
-
-.labelMain {
-  color: white;
-  font-size: 4vh;
-  font-weight: 400;
-  text-align: center;
 }
 
 .label {
@@ -138,7 +136,7 @@
   align-items: center;
 }
 
-.renderSuggestion>*:nth-child(2) {
+.renderSuggestion > *:nth-child(2) {
   margin-left: 12px;
 }
 

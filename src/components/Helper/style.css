@@ -1,16 +1,10 @@
 .helper {
-  margin: 10rem 0;
+  padding: 10rem 0;
 }
 
 /* Paper */
-.paper {
-  height: 300px;
-  box-sizing: border-box;
-}
-
 .paper:hover {
   background: #db5151;
-  transition: 300ms;
 }
 
 .paper h1 {
@@ -35,7 +29,6 @@
 }
 
 /* Material UI Icons */
-
 .material-icons {
   text-align: center;
   font-size: 10rem;
