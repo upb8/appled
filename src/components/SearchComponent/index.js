@@ -20,6 +20,7 @@ import { withRouter } from "react-router-dom";
 // Imagine you have a list of languages that you'd like to autosuggest.
 const autosuggest = [
   {
+    image: '',
     name: "lga775",
     component: "cpu",
     type: "Core 2 Duo",
@@ -28,29 +29,44 @@ const autosuggest = [
   {
     name: "E4200",
     component: "cpu",
+    image: image1,
+    component: "CPU",
     type: "Core 2 Duo",
     id: [2]
   },
   {
     name: "January 2007",
+    image: '',
+    name: 'E5200',
+    component: 'CPU',
+    type: 'i5',
+    id: [4]
+  },
+  {
+    image: '',
+    name: 'January 2007',
     component: "cpu",
     type: "Core 2 Duo",
     id: [3]
   },
   {
     name: "Core 2 Duo",
+    image: '',
     component: "cpu",
     type: "Core 2 Duo",
     id: [3]
   },
   {
     name: "HH80557PG0332M",
+    image: '',
+    name: 'HH80557PG0332M',
     component: "cpu",
     type: "Core 2 Duo",
     id: [1]
   },
   {
     name: "BX80557E4300",
+    image: '',
     component: "cpu",
     type: "Core 2 Duo",
     id: [1]
@@ -74,18 +90,29 @@ const getSuggestions = value => {
 // When suggestion is clicked, Autosuggest needs to populate the input
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
 // input value for every given suggestion.
-const getSuggestionValue = suggestion => suggestion.name;
+const getSuggestionValue = suggestion => {
+  return suggestion.type + " " + suggestion.name;
+}
 
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => {
   console.log(suggestion);
   return (
     <div>
-      {suggestion.id.map((component, i) => (
-        <div key={component.toString()}>
-          {suggestion.component} - {suggestion.type} - {suggestion.name}
-        </div>
-      ))}
+      {
+        suggestion.id.map((component, i) =>
+          <div className="flex-container" key={component.toString()}>
+            <div>
+              <img src={suggestion.image} width="50" height="50"></img> 
+            </div>
+            <div className="auto-suggestion-text" key={component.toString()}> 
+              {suggestion.component} - {suggestion.type} {suggestion.name}
+            </div>
+          </div>
+          
+
+        )
+      }
     </div>
   );
 };
@@ -119,8 +146,14 @@ class Search extends React.Component {
   onChange = (event, { newValue }) => {
     this.setState({
       value: newValue
+      
+      
     });
   };
+
+   handleChange(e) {
+    console.log(e.target.value);
+  }
 
   // Autosuggest will call this function every time you need to update suggestions.
   // You already implemented this logic above, so just use it.
@@ -139,7 +172,6 @@ class Search extends React.Component {
 
   render() {
     const { value, suggestions } = this.state;
-    console.log(this.props);
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = {
@@ -191,6 +223,7 @@ class Search extends React.Component {
                   renderSuggestion={renderSuggestion}
                   inputProps={inputProps}
                   className='input-width'
+                  onChange={(e) => {this.handleChange(e)}}
                 />
               </div>
             </Grid>
