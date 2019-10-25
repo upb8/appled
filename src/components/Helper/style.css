@@ -3,9 +3,7 @@
 }
 
 /* Paper */
-.paper {
-  clip-path: circle();
-}
+
 
 .paper:hover {
   background: #db5151;
