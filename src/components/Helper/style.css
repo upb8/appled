@@ -3,11 +3,10 @@
 }
 
 /* Paper */
-
-
 .paper:hover {
   background: #db5151;
   color: whitesmoke;
+  opacity: 0.9;
 }
 
 .paper h1 {
@@ -23,16 +22,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80%;
+  height: 70%;
 }
 
 .paper-text {
-  height: 20%;
+  height: 30%;
   text-align: center;
 }
 
 /* Material UI Icons */
 .material-icons {
   text-align: center;
-  font-size: 10rem;
+  font-size: 6rem;
 }

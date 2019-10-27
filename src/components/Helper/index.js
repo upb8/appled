@@ -7,7 +7,7 @@ import "./style.css";
 const useStyles = makeStyles(theme => ({
   root: {
     transition: "300ms",
-    height: 300,
+    height: 200,
     boxSizing: "border-box",
     cursor: "pointer"
   }
@@ -18,8 +18,8 @@ const Helper = props => {
   return (
     <div className='helper'>
       <Grid container direction='row' justify='center'>
-        <Grid item xs={12} sm={1} md={1} lg={1}></Grid>
-        <Grid item xs={12} sm={10} md={10} lg={10}>
+        <Grid item xs={12} sm={2} md={2} lg={2}></Grid>
+        <Grid item xs={12} sm={8} md={8} lg={8}>
           {/* Inner Start  */}
           <Grid container direction='row' justify='center' spacing={2}>
             <Grid item xs={12} sm={4} md={4} lg={4}>
@@ -62,7 +62,7 @@ const Helper = props => {
 
           {/* Inner End */}
         </Grid>
-        <Grid item xs={12} sm={1} md={1} lg={1}></Grid>
+        <Grid item xs={12} sm={2} md={2} lg={2}></Grid>
       </Grid>
     </div>
   );

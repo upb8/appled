@@ -1,33 +1,32 @@
 [
-	{
-        "id": "1",
-        "image": "ImageLink",
-        "name": "Core i5",
-        "model": "580M",
-        "manufacturer": "intel",
-        "architecture": "Ice Lake",
-        "wordSize": "64 bit",
-        "cores": "2",
-        "threads": "4",
-        "tdp": "35 W",
-        "frequency": "2.4 GHz",
-        "igpu": "HD Graphics",
-        "igpuFrequency": "500 MHz"
-    },
-    {
-        "id": "1",
-        "image": "ImageLink",
-        "name": "Core i5",
-        "model": "580M",
-        "manufacturer": "intel",
-        "architecture": "Ice Lake",
-        "wordSize": "64 bit",
-        "cores": "2",
-        "threads": "4",
-        "tdp": "35 W",
-        "frequency": "2.4 GHz",
-        "igpu": "HD Graphics",
-        "igpuFrequency": "500 MHz"
-    }
-	
+  {
+    "id": "1",
+    "image": "ImageLink",
+    "name": "Core i5",
+    "model": "580M",
+    "manufacturer": "intel",
+    "architecture": "Ice Lake",
+    "wordSize": "64 bit",
+    "cores": "2",
+    "threads": "4",
+    "tdp": "35 W",
+    "frequency": "2.4 GHz",
+    "igpu": "HD Graphics",
+    "igpuFrequency": "500 MHz"
+  },
+  {
+    "id": "1",
+    "image": "ImageLink",
+    "name": "Core i5",
+    "model": "580M",
+    "manufacturer": "intel",
+    "architecture": "Ice Lake",
+    "wordSize": "64 bit",
+    "cores": "2",
+    "threads": "4",
+    "tdp": "35 W",
+    "frequency": "2.4 GHz",
+    "igpu": "HD Graphics",
+    "igpuFrequency": "500 MHz"
+  }
 ]
