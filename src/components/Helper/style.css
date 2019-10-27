@@ -1,12 +1,12 @@
 .helper {
-  padding: 10rem 0;
+  padding: 10vh 0;
 }
 
 /* Paper */
 .paper:hover {
   background: #db5151;
   color: whitesmoke;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 .paper h1 {

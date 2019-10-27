@@ -100,11 +100,11 @@ const renderSuggestion = suggestion => {
   return (
     <div>
       {suggestion.id.map((component, i) => (
-        <div className="renderSuggestion" key={component.toString()}>
+        <div className='renderSuggestion' key={component.toString()}>
           <div>
-            <img src={suggestion.image} width="50" height="50"></img>
+            <img src={suggestion.image} width='50' height='50'></img>
           </div>
-          <div className="auto-suggestion-text" key={component.toString()}>
+          <div className='auto-suggestion-text' key={component.toString()}>
             {suggestion.component} - {suggestion.type} {suggestion.name}
           </div>
         </div>
@@ -175,30 +175,30 @@ class Search extends React.Component {
     // Finally, render it!
     return (
       <div>
-        <div className="labelMain">
-          <label className="label">Hackintosh guide (Dummy text)</label>
+        <div className='labelMain'>
+          <label className='label'>Hackintosh guide (Dummy text)</label>
         </div>
 
-        <div className="searchContainerHolder">
-          <Grid container direction="row">
+        <div className='searchContainerHolder'>
+          <Grid container direction='row'>
             {/* 1 */}
             <Grid item xs={12} sm={1} md={1} lg={1}></Grid>
             {/* 2 */}
             <Grid item xs={12} sm={10} md={10} lg={10}>
               <Grid
                 container
-                direction="row"
-                justify="center"
-                alignItems="center"
+                direction='row'
+                justify='center'
+                alignItems='center'
               >
                 <Grid item xs={12} sm={3} md={3} lg={3}>
                   <Dropdown
-                    arrowClassName="dropDownArrow"
-                    placeholderClassName="dropDownPlaceholder"
-                    className="dropDown"
-                    controlClassName="dropDownControl"
+                    arrowClassName='dropDownArrow'
+                    placeholderClassName='dropDownPlaceholder'
+                    className='dropDown'
+                    controlClassName='dropDownControl'
                     options={options}
-                    placeholder="Type"
+                    placeholder='Type'
                   />
                 </Grid>
                 <Grid item xs={12} sm={7} md={7} lg={7}>
@@ -217,9 +217,9 @@ class Search extends React.Component {
                 </Grid>
                 <Grid item xs={12} sm={2} md={2} lg={2}>
                   <Button
-                    id="btn"
-                    variant="contained"
-                    className="uploadBtn"
+                    id='btn'
+                    variant='contained'
+                    className='uploadBtn'
                     onClick={() =>
                       this.props.history.push("/result", {
                         item: this.state.item_info
@@ -234,8 +234,8 @@ class Search extends React.Component {
             {/* 3 */}
             <Grid item xs={12} sm={1} md={1} lg={1}></Grid>
           </Grid>
-          <Helper />
         </div>
+        <Helper />
       </div>
     );
   }

@@ -9,7 +9,10 @@ const useStyles = makeStyles(theme => ({
     transition: "300ms",
     height: 200,
     boxSizing: "border-box",
-    cursor: "pointer"
+    cursor: "pointer",
+    [theme.breakpoints.between("sm", "sm")]: {
+      height: 170
+    }
   }
 }));
 
